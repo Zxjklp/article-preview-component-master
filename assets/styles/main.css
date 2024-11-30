@@ -1,0 +1,215 @@
+/* CSS RESET */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* Add accessible line-height */
+  line-height: 1.5;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  /* Colors */
+  --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --color-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --color-grayish-blue: hsl(212, 23%, 69%);
+  --color-light-grayish-blue: hsl(210, 46%, 95%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --fs-body: 0.8125rem;  /* 13px */
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --font-family: 'Manrope', sans-serif;
+}
+
+body{
+  background-color: var(--color-light-grayish-blue);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-family);
+  padding: 1.5rem;
+}
+
+.article-preview {
+  background-color: var(--color-white);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  max-width: 20.4375rem; /* 327px */
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.1);
+}
+
+.article-preview__figure {
+  height: 12.5rem; /* 200px */
+}
+
+.article-preview__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-preview__content {
+  padding: 2.25rem 2rem 1.25rem;
+}
+
+.article-preview__title {
+  color: var(--color-very-dark-grayish-blue);
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.article-preview__text {
+  color: var(--color-desaturated-dark-blue);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.article-preview__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author__image {
+  width: 2.5rem; /* 40px */
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.author__name {
+  color: var(--color-very-dark-grayish-blue);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+}
+
+.author__date {
+  color: var(--color-grayish-blue);
+  font-size: var(--fs-body);
+}
+
+.share__button {
+  background-color: var(--color-light-grayish-blue);
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.share__button:hover{
+  background-color: var(--color-grayish-blue);
+}
+
+.share__button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.share__menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-very-dark-blue);
+  padding: 1rem 2rem;
+}
+
+.share__menu[hidden] {
+  display: none;
+}
+
+.share__text {
+  color: var(--color-grayish-blue);
+  font-size: 0.8125rem;
+  letter-spacing: 0.3125rem;
+  text-transform: uppercase;
+}
+
+.share__list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.share[data-share-toggle="true"] .share__menu {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}

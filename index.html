@@ -2,35 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Article preview about furniture decoration tips">
+  
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/main.css">
   
   <title>Frontend Mentor | Article preview component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
+    <article class="article-preview">
+      <figure class="article-preview__figure">
+        <img 
+          class="article-preview__image"
+          src="./assets/images/drawers.jpg" 
+          alt="Stylish green furniture drawer against white wall"
+          width="660"
+          height="528"
+        >
+      </figure>
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+      <div class="article-preview__content">
+        <h1 class="article-preview__title">
+          Shift the overall look and feel by adding these wonderful touches to furniture in your home
+        </h1>
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
+        <div class="article-preview__body">
+          <p class="article-preview__text">
+            Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.
+          </p>
+        </div>
 
-  Michelle Appleton
-  28 Jun 2020
+        <div class="article-preview__footer">
+          <div class="author">
+            <img 
+              class="author__image"
+              src="./assets/images/avatar-michelle.jpg" 
+              alt="Profile picture of Michelle Appleton"
+              width="175"
+              height="175"
+            >
+            <div class="author__info">
+              <p class="author__name">Michelle Appleton</p>
+              <p class="author__date">28 Jun 2020</p>
+            </div>
+          </div>
 
-  Share
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          <div class="share" data-share data-share-toggle="false">
+            <button 
+              class="share__button" 
+              type="button"
+              aria-controls="share-menu"
+              aria-expanded="false"
+              aria-label="Share this article"
+            >
+              <img src="./assets/images/icon-share.svg" alt="" aria-hidden="true">
+            </button>
+
+            <div 
+              id="share-menu" 
+              class="share__menu" 
+              role="dialog" 
+              aria-label="Share menu"
+            >
+              <p class="share__text">Share</p>
+              <ul class="share__list">
+                <li>
+                  <a 
+                    href="https://facebook.com" 
+                    class="share__link"
+                    aria-label="Share on Facebook"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./assets/images/icon-facebook.svg" alt="" aria-hidden="true" width="20" height="20" />
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://twitter.com" 
+                    class="share__link"
+                    aria-label="Share on Twitter"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./assets/images/icon-twitter.svg" alt="" aria-hidden="true" width="20" height="17" />
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://pinterest.com" 
+                    class="share__link"
+                    aria-label="Share on Pinterest"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./assets/images/icon-pinterest.svg" alt="" aria-hidden="true" width="20" height="20" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
 </body>
 </html>
