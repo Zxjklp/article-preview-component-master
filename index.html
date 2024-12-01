@@ -14,7 +14,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-  
+
     <link rel="stylesheet" href="./css/main.css" />
     <script defer src="./js/script.js"></script>
 
@@ -24,13 +24,27 @@
     <main>
       <article class="article-preview">
         <figure class="article-preview__figure">
-          <img
-            class="article-preview__image"
-            src="./images/drawers.webp"
-            alt="Stylish green furniture drawer against white wall"
-            width="660"
-            height="528"
-          />
+          <picture>
+            <source
+              media="(max-width: 47.9375)"
+              srcset="./images/drawers-small.webp"
+              width="327"
+              height="262"
+            />
+            <source
+              media="(min-width: 48rem)"
+              srcset="./images/drawers.webp"
+              width="660"
+              height="528"
+            />
+            <img
+              class="article-preview__image"
+              src="./images/drawers.webp"
+              alt="Stylish green furniture drawer against white wall"
+              width="660"
+              height="528"
+            />
+          </picture>
         </figure>
 
         <div class="article-preview__content">

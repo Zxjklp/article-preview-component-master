@@ -108,6 +108,9 @@ body {
 .article-preview__figure {
   height: 12.5rem; /* 200px */
 }
+.article-preview picture {
+  height: 100%;
+}
 .article-preview__image {
   height: 100%;
   object-fit: cover;
