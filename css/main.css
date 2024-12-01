@@ -1,0 +1,259 @@
+/* CSS RESET */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* Add accessible line-height */
+  line-height: 1.5;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  /* Colors */
+  --color-very-dark-grayish-blue: #48556a;
+  --color-desaturated-dark-blue: #5f7086;
+  --color-grayish-blue: #646f7b;
+  --color-light-grayish-blue: #ecf2f8;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --fs-body: 0.8125rem; /* 13px */
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: var(--color-light-grayish-blue);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-family);
+  padding: 1.5rem;
+}
+
+.article-preview {
+  overflow: hidden;
+  background-color: var(--color-white);
+  border-radius: 0.625rem; /* 10px */
+  max-inline-size: 20.4375rem; /* 327px */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.article-preview__figure {
+  height: 12.5rem; /* 200px */
+}
+.article-preview__image {
+  height: 100%;
+  object-fit: cover;
+}
+.article-preview__content {
+  padding: 2.25rem 2rem 1.25rem;
+}
+.article-preview__title {
+  color: var(--color-very-dark-grayish-blue);
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+.article-preview__text {
+  color: var(--color-desaturated-dark-blue);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.12px;
+  line-height: 2;
+  margin-block-end: 2rem;
+}
+.article-preview__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.author__image {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.author__name {
+  color: var(--color-very-dark-grayish-blue);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.12px;
+  line-height: 2;
+}
+.author__date {
+  color: var(--color-grayish-blue);
+  font-size: var(--fs-body);
+}
+
+.share {
+  position: relative;
+}
+.share__menu {
+  position: absolute;
+  left: -16.5rem;
+  right: -2rem;
+  bottom: -1.7rem;
+  background-color: var(--color-very-dark-grayish-blue);
+  padding: 1.7rem 2.5rem;
+  display: none;
+}
+.share[data-share-toggle="true"] .share__menu {
+  display: flex;
+  gap: 1.25rem;
+}
+.share__button {
+  position: relative;
+  background-color: var(--color-light-grayish-blue);
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transform: translateY(0.3rem);
+  z-index: 1;
+}
+.share__button:hover {
+  background-color: var(--color-desaturated-dark-blue);
+}
+.share__button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+/* Active state styles for share button */
+.share[data-share-toggle="true"] .share__button {
+  background-color: var(--color-desaturated-dark-blue);
+}
+.share[data-share-toggle="true"] .share__button img {
+  filter: brightness(0) invert(1);
+}
+
+.share__text {
+  color: #8e9aa7;
+  font-size: 0.8125rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+.share__list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 48rem) {
+  .article-preview {
+    overflow: visible;
+    max-inline-size: 45.625rem; /* 730px */
+    display: grid;
+    grid-template-columns: 17.8125rem auto; /* 285px */
+  }
+  .article-preview__figure {
+    height: 100%;
+  }
+  .article-preview__image {
+    border-radius: 10px 0 0 10px;
+    object-position: left;
+  }
+  .article-preview__content {
+    padding: 2rem 2.5rem; /* 32px 40px */
+  }
+  .article-preview__title {
+    font-size: 1.25rem; /* 20px */
+    letter-spacing: 0.25px;
+    margin-bottom: 1rem;
+  }
+  .article-preview__text {
+    margin-block-end: 1.25rem; /* 20px */
+  }
+
+  .share__menu {
+    left: 50%;
+    bottom: 160%;
+    transform: translateX(-50%);
+    width: 15rem; /* 240px */
+    border-radius: 0.625rem;
+    padding: 1rem 2rem;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  }
+  .share__menu::after {
+    /* Triangle */
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 0.75rem solid transparent;
+    border-right: 0.75rem solid transparent;
+    border-top: 0.75rem solid var(--color-very-dark-grayish-blue);
+  }
+}
