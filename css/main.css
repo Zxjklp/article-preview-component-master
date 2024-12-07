@@ -208,7 +208,7 @@ body {
 }
 
 .share__text {
-  color: #8e9aa7;
+  color: #e5e8eb;
   font-size: 0.8125rem;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
@@ -220,7 +220,7 @@ body {
   padding: 0;
 }
 .share__link img {
-  filter: brightness(0) invert(0.9);
+  filter: brightness(0) invert(0.8);
   transition: filter 0.3s ease;
 }
 .share__link:hover img {
