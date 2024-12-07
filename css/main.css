@@ -219,6 +219,13 @@ body {
   list-style: none;
   padding: 0;
 }
+.share__link img {
+  filter: brightness(0) invert(0.8);
+  transition: filter 0.3s ease;
+}
+.share__link:hover img {
+  filter: brightness(0) invert(1);
+}
 
 @media (min-width: 48rem) {
   .article-preview {
