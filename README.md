@@ -8,7 +8,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/meet-landing-page-9JxvD92y9h](https://www.frontendmentor.io/solutions/meet-landing-page-9JxvD92y9h)
+- [Solution URL](https://www.frontendmentor.io/solutions/article-previe-component-WFy4u1uGjk)
 - [Live Site](https://zxjklp.github.io/article-preview-component-master/)
 
 ### Built With
